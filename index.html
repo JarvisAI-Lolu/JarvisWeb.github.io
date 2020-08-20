@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JarvisWeb</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<script>
+    var audio = new Audio('Jarvis.mp3');
+    audio.play();
+</script>
+<meta name="viewport" content="width=device-width,intial-scale=1">
+<body>
+    <style type="text/css">
+        body{
+            background-image: url('background.PNG');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .content{
+            background:white;
+            width: 50%;
+            padding: 40px;
+            margin: 100px auto;
+        }
+    </style>
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="logo.jpeg">
+            </div>
+            <ul>
+                <li class= "active"><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://www.gmail.com">Gmail</a></li>
+                <li><a href="https://www.google.com">Google</a></li>
+                <li><a href="https://zoom.us">Zoom Meetings</a></li>
+                <li><a href="https://exam.net">Exam.net</a></li>
+                <li><a href="https://images.google.com">Google Images</a></li>
+                <li><a href="https://wikipedia.org">Wikipedia</a></li>               
+            </ul>
+        </div>
+        <div class="title">
+            <h1>JarvisWeb</h1>
+        </div>
+        <div class="button">
+            <a href="https://classroom.google.com/" class="btn">Google Classroom</a>
+            <a href="https://web.whatsapp.com" class="btn">Whatsapp</a>
+            <a href="timetable.html" class="btn">Timetable</a>
+        </div>
+        <div class="github">
+            <a href="https://github.com/JarvisAI-Lolu" class="btn">GitHub</a>
+        </div>
+    </header>
+<div class="timemachine">
+    <head>
+        <script>
+            function startTime(){
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML = h +":" + m +":" +s;
+                var t = setTimeout(startTime,500);
+            }
+            function checkTime(i){
+                if(i<10) {i="0"+i};
+                return i;
+            }
+        </script>
+    </head>
+    <body onload="startTime()">
+        <div id="txt"></div>
+    </body>
+</div>
+<div class="copyright">
+    <h1> JarvisWeb &#169</h1>
+<div class="day">
+    <head>
+        <script>
+            function daytime(){
+                var d = new Date();
+                var weekday = new Array(8);
+                weekday[0] = "Sunday";
+                weekday[1] = "Monday";
+                weekday[2] = "Tuesday";
+                weekday[3] = "Wednesday";
+                weekday[4] = "Thursday";
+                weekday[5] = "Friday";
+                weekday[6] = "Saturday";
+                var n = weekday[d.getDay()];
+                document.innerHTML=n;
+                }
+        </script>
+    </head>
+    <body onload="daytime()">
+        <div id="txt"></div>
+    </body>
+</div>
+</body>
+
+
+
+
+
